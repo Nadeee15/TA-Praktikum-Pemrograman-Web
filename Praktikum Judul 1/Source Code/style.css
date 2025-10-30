@@ -1,0 +1,759 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Color Scheme */
+:root {
+    --primary-peach: #d4a68a;
+    --light-peach: #e8c4a8;
+    --dark-peach: #b8826d;
+    --cream: #f5ebe0;
+    --dark: #2c2c2c;
+    --white: #ffffff;
+}
+
+/* Page Layout */
+.page {
+    min-height: 100vh;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+/* ============ NAVIGATION DOTS ============ */
+.slide-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(212, 166, 138, 0.3);
+    border: 2px solid var(--primary-peach);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-dot:hover {
+    background: var(--primary-peach);
+    transform: scale(1.3);
+}
+
+/* ============ COVER PAGE ============ */
+#cover {
+    background: var(--dark-peach); /* warna cokelat luar */
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.cover-frame {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    background: var(--primary-peach);
+    position: relative;
+    border: none; /* Hilangkan garis putih */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-left {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.vertical-line-top {
+    width: 2px;
+    height: 250px;
+    background: var(--white);
+}
+
+.circle-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--white);
+    margin: 15px 0;
+}
+
+.year-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+.cover-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 150px;
+}
+
+.cover-title {
+    text-align: center;
+    width: 100%;
+}
+
+.cover-title h1 {
+    font-size: 72px;
+    font-weight: 400;
+    letter-spacing: 16px;
+    margin-bottom: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--white);
+}
+
+.profile-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    margin: 0 auto 40px;
+    background: #d4d4d4;
+    position: relative;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-title h2 {
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px 40px;
+    display: inline-block;
+}
+
+.cover-right {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.name-tag {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.vertical-line-bottom {
+    width: 2px;
+    height: 250px;
+    background: var(--white);
+    margin-top: 15px;
+}
+
+.circle-dot-bottom {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--white);
+    margin-top: 15px;
+}
+
+/* ============ ABOUT ME PAGE ============ */
+#about {
+    background: var(--light-peach);
+}
+
+.about-layout {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.about-left h2 {
+    font-size: 64px;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+    color: var(--dark);
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.about-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--dark);
+    text-align: justify;
+}
+
+.about-right {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    height: 600px;
+    border-radius: 300px 300px 0 0;
+    overflow: hidden;
+    background: var(--dark);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* supaya kepala tidak terpotong */
+    filter: rgba(100%);
+}
+
+/* ============ VALUES PAGE ============ */
+#values {
+    background: var(--cream);
+}
+
+#values h2 {
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 4px;
+    color: var(--dark);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-item {
+    text-align: center;
+    padding: 40px;
+    background: var(--light-peach);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-circle{
+  width: 180px;                /* samakan dengan desainmu */
+  aspect-ratio: 1 / 1;         /* selalu bulat */
+  border-radius: 50%;
+  overflow: hidden;
+  background: none;            /* jangan ada warna/lingkaran di dalamnya */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-circle img{
+  width: 100%;
+  height: 100%;
+  display: block;              /* hilangkan gap bawah img */
+  object-fit: cover;           /* isi penuh lingkaran, tanpa letterbox */
+  object-position: 60% 50%;    /* geser ke kanan dikit biar lamp & orang muat */
+  filter: grayscale(100%);
+  transform: scale(1.08);      /* sedikit zoom biar pinggirnya rapih (opsional) */
+  transform-origin: center;
+}
+
+.value-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.value-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ============ RESUME PAGE ============ */
+#resume {
+    background: var(--cream);
+}
+
+.resume-layout {
+    display: flex;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.resume-left {
+    flex: 2;
+}
+
+.resume-left h2 {
+    font-size: 64px;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+    color: var(--dark);
+}
+
+.resume-section {
+    margin-bottom: 50px;
+}
+
+.resume-section h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: var(--dark);
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary-peach);
+}
+
+.resume-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid var(--light-peach);
+}
+
+.resume-item .year {
+    display: inline-block;
+    font-weight: bold;
+    color: var(--dark-peach);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.resume-item p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ============ WORK AREA PAGES ============ */
+.work-page {
+    background: var(--dark);
+    color: var(--white);
+    position: relative;
+}
+
+.work-page.dark {
+    background: #1a1a1a;
+}
+
+.work-content {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.work-number {
+    font-size: 120px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 20px;
+    color: var(--primary-peach);
+}
+
+.work-content h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.work-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(50%);
+}
+
+/* ============ PROJECT PAGES ============ */
+#project1, #project2, #project3, #project4 {
+    background: var(--white);
+}
+
+.project-layout {
+    display: flex;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-left {
+    flex: 1;
+}
+
+.project-left h2 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    color: var(--dark);
+}
+
+.project-left h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--dark-peach);
+}
+
+.project-left p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+.project-details {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--cream);
+    border-radius: 15px;
+}
+
+.project-details p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.project-details strong {
+    color: var(--dark-peach);
+}
+
+.project-right {
+    flex: 1;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-images img:first-child {
+    grid-column: 1 / -1;
+    height: 350px;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+}
+
+.project-image-single {
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--light-peach);
+}
+
+.project-image-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+    .page {
+        padding: 40px 40px;
+    }
+    
+    .content-layout,
+    .about-layout,
+    .what-layout,
+    .resume-layout,
+    .project-layout,
+    .contact-layout {
+        flex-direction: column;
+    }
+    
+    .values-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cover-title h1 {
+        font-size: 48px;
+    }
+    
+    .work-image {
+        width: 100%;
+        position: relative;
+        height: 400px;
+    }
+    
+    .work-content {
+        position: relative;
+        left: 0;
+        transform: none;
+        margin-bottom: 30px;
+    }
+
+    .slide-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cover-title h1 {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+    
+    .cover-title h2 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 42px !important;
+    }
+    
+    .profile-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .year-label,
+    .name-tag {
+        display: none;
+    }
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  position: fixed; top:0; left:0; width:100%;
+  background: rgba(44,44,44,.95);
+  backdrop-filter: blur(10px);
+  z-index:1000; padding:0;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+.nav-container{
+  max-width:1400px; margin:0 auto;
+  display:flex; justify-content:center; gap:0;
+  padding:0 80px;
+}
+.nav-item{
+  color: rgba(255,255,255,.7);
+  text-decoration:none;
+  padding:20px 40px;
+  font-size:14px; letter-spacing:2px;
+  transition: color .3s ease, border-color .3s ease;
+  border-bottom:3px solid transparent;
+}
+.nav-item:hover{ color: var(--primary-peach); }
+
+/* Item aktif (dipakai oleh :has(:target) rules di bawah) */
+.nav-item.is-active{ /* opsional kalau nanti kamu set manual */
+  color: var(--primary-peach);
+  border-bottom-color: var(--primary-peach);
+}
+
+/* Default: saat TIDAK ada hash → HOME aktif */
+body:not(:has(:target)) .navbar .nav-item[href="#cover"],
+html:not(:has(:target)) .navbar .nav-item[href="#cover"]{
+  color: var(--primary-peach);
+  border-bottom-color: var(--primary-peach);
+}
+
+/* SERVICES aktif bila target salah satu dari section services */
+body:has(#about:target, #values:target, #what-i-do:target, #resume:target)
+  .navbar .nav-item[href="#about"]{
+  color: var(--primary-peach);
+  border-bottom-color: var(--primary-peach);
+}
+
+/* PROJECT aktif bila target salah satu dari work/project/gallery */
+body:has(#work1:target, #work2:target, #project1:target, #project2:target,
+         #project3:target, #project4:target, #gallery:target)
+  .navbar .nav-item[href="#work1"]{
+  color: var(--primary-peach);
+  border-bottom-color: var(--primary-peach);
+}
+
+/* CONTACT aktif */
+body:has(#contact:target) .navbar .nav-item[href="#contact"]{
+  color: var(--primary-peach);
+  border-bottom-color: var(--primary-peach);
+}
+
+/* Biar anchor tidak ketutup navbar */
+.page{ scroll-margin-top: 80px; }
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.page {
+  scroll-snap-align: start;
+}
+
+
+/* ============ CONTACT PAGE (Final, Single Block) ============ */
+.contact-section {
+    background: #eac0a8; 
+    position: relative;
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 80px 60px;
+}
+
+.contact-section::before {
+    content: none;
+}
+
+.contact-container{position:relative; display:grid; grid-template-columns:1fr 1fr; gap:80px; max-width:1400px; margin:0 auto; width:100%; align-items:start; z-index:1;}
+.contact-left{padding-right:40px;}
+.contact-right{padding-left:40px; padding-top:80px;}
+
+.contact-header{margin-bottom:32px;}
+.contact-header h2{font-size:52px; font-weight:300; letter-spacing:2px; margin-bottom:14px; color:rgba(0,0,0,.9);}
+.profile-link{font-size:14px; line-height:1.8; color:rgba(0,0,0,.85);}
+
+.contact-form{display:flex; flex-direction:column; gap:18px; margin-top:12px;}
+.form-row{display:grid; grid-template-columns:repeat(2,1fr); gap:18px;}
+.contact-form input, .contact-form textarea{
+  background:#fff; border:1px solid rgba(0,0,0,.08);
+  padding:14px 16px; color:#1e1e1e; font-size:15px; font-family:'Georgia', serif;
+  border-radius:10px; transition:border-color .2s, box-shadow .2s, transform .06s;
+  box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder{color:#9aa3ab;}
+.contact-form input:focus, .contact-form textarea:focus{
+  outline:none; border-color:var(--dark-peach);
+  box-shadow:0 0 0 4px rgba(201, 142, 116, .25);
+}
+
+.send-btn{
+  background:var(--dark-peach); color:#fff; border:1px solid rgba(0,0,0,.05);
+  padding:14px 32px; font-size:13px; letter-spacing:1.6px; cursor:pointer;
+  transition:transform .08s, box-shadow .2s, background .2s;
+  font-family:'Georgia', serif; font-weight:700; border-radius:999px; text-transform:uppercase; align-self:flex-start;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);
+}
+.send-btn:hover{background:#a76a54; transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.18);}
+.send-btn:active{transform:translateY(0); box-shadow:0 6px 16px rgba(0,0,0,.15);}
+.send-btn:disabled{opacity:.65; cursor:not-allowed;}
+
+.contact-info-list{display:flex; flex-direction:column; gap:32px;}
+.info-item{border-bottom:1px solid rgba(255,255,255,.22); padding-bottom:22px;}
+.info-item:last-child{border-bottom:none;}
+.info-item h4{font-size:11px; letter-spacing:2px; color:rgba(0,0,0,.65); margin-bottom:8px; font-weight:500; text-transform:uppercase;}
+.info-item p{font-size:16px; line-height:1.7; color:rgba(0,0,0,.85);}
+
+.copyright{text-align:center; padding-top:48px; margin-top:72px;}
+.copyright p{font-size:11px; letter-spacing:1.6px; color:rgba(0,0,0,.72);}
+
+.contact-right a{color:rgba(0,0,0,.85); border-bottom:1px solid transparent; text-decoration:none; transition:color .3s, border-color .3s;}
+.contact-right a:hover{color:var(--dark-peach); border-bottom-color:var(--dark-peach);}
+
+@media (max-width:1180px){.contact-container{gap:56px;} .contact-right{padding-top:40px;}}
+@media (max-width:1024px){
+  .contact-container{grid-template-columns:1fr; gap:48px;}
+  .contact-left,.contact-right{padding:0;}
+  .form-row{grid-template-columns:1fr; gap:16px;}
+}
+@media (max-width:640px){.contact-section{padding:90px 24px 48px;} .contact-header h2{font-size:40px;} .send-btn{width:100%; text-align:center;}}
