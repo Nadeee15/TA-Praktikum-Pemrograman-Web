@@ -70,7 +70,7 @@ body {
 
 /* ============ COVER PAGE ============ */
 #cover {
-    background: var(--dark-peach); /* warna cokelat luar */
+    background: var(--dark-peach); 
     color: var(--white);
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@ body {
     height: 100vh;
     background: var(--primary-peach);
     position: relative;
-    border: none; /* Hilangkan garis putih */
+    border: none; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,7 +276,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; /* supaya kepala tidak terpotong */
+    object-position: center top; 
     filter: rgba(100%);
 }
 
@@ -314,11 +314,11 @@ body {
 }
 
 .value-circle{
-  width: 180px;                /* samakan dengan desainmu */
-  aspect-ratio: 1 / 1;         /* selalu bulat */
+  width: 180px;               
+  aspect-ratio: 1 / 1;         
   border-radius: 50%;
   overflow: hidden;
-  background: none;            /* jangan ada warna/lingkaran di dalamnya */
+  background: none;           
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,11 +327,11 @@ body {
 .value-circle img{
   width: 100%;
   height: 100%;
-  display: block;              /* hilangkan gap bawah img */
-  object-fit: cover;           /* isi penuh lingkaran, tanpa letterbox */
-  object-position: 60% 50%;    /* geser ke kanan dikit biar lamp & orang muat */
+  display: block;             
+  object-fit: cover;         
+  object-position: 60% 50%;   
   filter: grayscale(100%);
-  transform: scale(1.08);      /* sedikit zoom biar pinggirnya rapih (opsional) */
+  transform: scale(1.08);      
   transform-origin: center;
 }
 
@@ -643,27 +643,23 @@ body {
 }
 .nav-item:hover{ color: var(--primary-peach); }
 
-/* Item aktif (dipakai oleh :has(:target) rules di bawah) */
-.nav-item.is-active{ /* opsional kalau nanti kamu set manual */
+.nav-item.is-active{ 
   color: var(--primary-peach);
   border-bottom-color: var(--primary-peach);
 }
 
-/* Default: saat TIDAK ada hash → HOME aktif */
 body:not(:has(:target)) .navbar .nav-item[href="#cover"],
 html:not(:has(:target)) .navbar .nav-item[href="#cover"]{
   color: var(--primary-peach);
   border-bottom-color: var(--primary-peach);
 }
 
-/* SERVICES aktif bila target salah satu dari section services */
 body:has(#about:target, #values:target, #what-i-do:target, #resume:target)
   .navbar .nav-item[href="#about"]{
   color: var(--primary-peach);
   border-bottom-color: var(--primary-peach);
 }
 
-/* PROJECT aktif bila target salah satu dari work/project/gallery */
 body:has(#work1:target, #work2:target, #project1:target, #project2:target,
          #project3:target, #project4:target, #gallery:target)
   .navbar .nav-item[href="#work1"]{
@@ -671,13 +667,11 @@ body:has(#work1:target, #work2:target, #project1:target, #project2:target,
   border-bottom-color: var(--primary-peach);
 }
 
-/* CONTACT aktif */
 body:has(#contact:target) .navbar .nav-item[href="#contact"]{
   color: var(--primary-peach);
   border-bottom-color: var(--primary-peach);
 }
 
-/* Biar anchor tidak ketutup navbar */
 .page{ scroll-margin-top: 80px; }
 
 html {
