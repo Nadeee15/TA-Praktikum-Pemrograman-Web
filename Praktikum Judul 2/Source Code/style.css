@@ -612,9 +612,11 @@ body {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e3e3e3;
+    font-family: 'Poppins', sans-serif;
+    /* opsional: tambahkan ini biar jelas beda */
+    /* background-color: #fff3f0; */
 }
+
 
 /* NAVBAR */
 .navbar{
