@@ -12,7 +12,7 @@ Dibangun menggunakan **Tailwind CSS** untuk tampilan modern, bersih, dan fleksib
 
 ---
 
-## 🧩 Struktur Halaman
+## Struktur Halaman
 Website terdiri atas enam komponen utama:
 1. Header / Navigation  
 2. Hero Section  
@@ -23,7 +23,7 @@ Website terdiri atas enam komponen utama:
 
 ---
 
-## ⚙️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 - **HTML**  
 - **Tailwind CSS (via CDN)**  
 - **Remix Icon / Lucide Icons** untuk ikon modern  
@@ -31,7 +31,7 @@ Website terdiri atas enam komponen utama:
 
 ---
 
-## 📸 Hasil Tampilan (Perbandingan Desktop dan Mobile)
+## Hasil Tampilan (Perbandingan Desktop dan Mobile)
 
 | Komponen | Versi Website | Versi Mobile | Keterangan |
 |-----------|---------------|---------------|-------------|
@@ -44,9 +44,7 @@ Website terdiri atas enam komponen utama:
 
 ---
 
-## 🔗 Repository
-Repository GitHub: [https://github.com/nadjwatasya/TA-Praktikum-Pemrograman-Web](#)
+## Repository
+Repository GitHub: [https://github.com/Nadeee15/TA-Praktikum-Pemrograman-Web](#)
 
 ---
-
-© 2025 StarkCorp. All rights reserved.  
