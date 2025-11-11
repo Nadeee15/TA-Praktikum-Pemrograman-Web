@@ -24,7 +24,7 @@ Website terdiri atas enam komponen utama:
 ---
 
 ## Teknologi yang Digunakan
-- **HTML**  
+- **HTML5**  
 - **Tailwind CSS (via CDN)**  
 - **Remix Icon / Lucide Icons** untuk ikon modern  
 - Tidak menggunakan framework JavaScript tambahan  
@@ -34,17 +34,15 @@ Website terdiri atas enam komponen utama:
 ## Hasil Tampilan (Perbandingan Desktop dan Mobile)
 
 | Komponen | Versi Website | Versi Mobile | Keterangan |
-|-----------|---------------|---------------|-------------|
+|---|---|---|---|
 | **Header / Navigation** | ![Website 1](./Tampilan%20Website/Website-1.png) | ![Mobile 1](./Tampilan%20Mobile/Mobile-1.png) | Logo StarkCorp dan menu navigasi responsif dengan tombol “Get Started”. |
-| **Hero Section** | ![Website 2](./Tampilan%20Website/Mobile-2.png) | ![Mobile 2](./Tampilan%20Mobile/Mobile-2.png) | Headline utama “Bangun Solusi Cerdas Bersama StarkCorp” dan tombol CTA (“Coba Sekarang”, “Lihat Fitur”). |
-| **Features Section** | ![Website 3](./Tampilan%20Website/Mobile-3.png) | ![Mobile 3](./Tampilan%20Mobile/Mobile-3.png) | Tiga fitur utama: *Performa Tinggi*, *Keamanan Terjamin*, *Skalabilitas Mudah*. |
-| **About Section** | ![Website 4](./Tampilan%20Website/Mobile-4.png) | ![Mobile 4](./Tampilan%20Mobile/Mobile-4.png) | Informasi perusahaan StarkCorp beserta poin keunggulan tim. |
-| **Contact Form** | ![Website 5](./Tampilan%20Website/Mobile-5.png) | ![Mobile 5](./Tampilan%20Mobile/Mobile-5.png) | Formulir kontak dengan nama, email, pesan, dan info kontak perusahaan. |
-| **Footer** | ![Website Footer](./Tampilan%20Website/Mobile-5.png) | ![Mobile Footer](./Tampilan%20Mobile/Mobile-5.png) | Bagian footer dengan quick links, subscribe form, dan social media. |
+| **Hero Section** | ![Website 2](./Tampilan%20Website/Website-2.png) | ![Mobile 2](./Tampilan%20Mobile/Mobile-2.png) | Headline utama “Bangun Solusi Cerdas Bersama StarkCorp” dan CTA (“Coba Sekarang”, “Lihat Fitur”). |
+| **Features Section** | ![Website 3](./Tampilan%20Website/Website-3.png) | ![Mobile 3](./Tampilan%20Mobile/Mobile-3.png) | Tiga fitur utama: *Performa Tinggi*, *Keamanan Terjamin*, *Skalabilitas Mudah*. |
+| **About Section** | ![Website 4](./Tampilan%20Website/Website-4.png) | ![Mobile 4](./Tampilan%20Mobile/Mobile-4.png) | Informasi perusahaan StarkCorp beserta poin keunggulan tim. |
+| **Contact Form** | ![Website 5](./Tampilan%20Website/Website-5.png) | ![Mobile 5](./Tampilan%20Mobile/Mobile-5.png) | Formulir kontak (Nama, Email, Pesan) + info kontak perusahaan. |
+| **Footer** | ![Website 6](./Tampilan%20Website/Website-6.png) | ![Mobile 6](./Tampilan%20Mobile/Mobile-6.png) | Footer dengan quick links, subscribe form, dan social media. |
 
 ---
 
 ## Repository
 Repository GitHub: [https://github.com/Nadeee15/TA-Praktikum-Pemrograman-Web](#)
-
----
