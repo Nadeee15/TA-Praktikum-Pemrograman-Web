@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StarkCorp — Landing Page</title>
+  <meta name="description" content="Landing page responsif untuk perusahaan teknologi menggunakan Tailwind CSS." />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            peach: {
+              50:'#FFF7F3',100:'#FFE9E1',200:'#FFD3C3',300:'#FFB89E',
+              400:'#FF9975',500:'#FF7A4D',600:'#F0623A',700:'#D94F2E',
+              800:'#B83F26',900:'#96331F'
+            }
+          },
+          boxShadow:{ soft:'0 10px 25px -10px rgba(0,0,0,0.15)'}
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon inline -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FF7A4D'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="antialiased text-gray-800">
+  <!-- ===== Header / Navigation ===== -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- TETAP: logo navbar seperti punyamu -->
+        <a href="#home" class="flex items-center gap-2 group" aria-label="Beranda">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-peach-500 text-white font-bold shadow-soft group-hover:scale-105 transition">S</span>
+          <span class="font-semibold tracking-tight">StarkCorp</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#home" class="hover:text-peach-600">Home</a>
+          <a href="#features" class="hover:text-peach-600">Features</a>
+          <a href="#about" class="hover:text-peach-600">About</a>
+          <a href="#contact" class="hover:text-peach-600">Contact</a>
+          <a href="#contact" class="inline-flex items-center rounded-xl bg-peach-600 px-4 py-2 font-medium text-white hover:bg-peach-700 shadow-soft">Get Started</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100" aria-controls="mobileMenu" aria-expanded="false" aria-label="Buka menu">
+          <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
+      <div class="space-y-1 px-4 py-3 text-sm">
+        <a href="#home" class="block rounded-lg px-3 py-2 hover:bg-gray-50">Home</a>
+        <a href="#features" class="block rounded-lg px-3 py-2 hover:bg-gray-50">Features</a>
+        <a href="#about" class="block rounded-lg px-3 py-2 hover:bg-gray-50">About</a>
+        <a href="#contact" class="block rounded-lg px-3 py-2 hover:bg-gray-50">Contact</a>
+        <a href="#contact" class="mt-1 block rounded-lg bg-peach-600 px-3 py-2 text-white hover:bg-peach-700">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero Section ===== -->
+    <section id="home" class="relative overflow-hidden">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-peach-200 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-peach-100 blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <span class="inline-flex items-center rounded-full bg-peach-100 px-3 py-1 text-xs font-medium text-peach-700">Inovasi Teknologi Masa Depan</span>
+            <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">Bangun Solusi Cerdas Bersama StarkCorp</h1>
+            <p class="mt-4 text-lg text-gray-600">Kami menghadirkan inovasi perangkat lunak dan layanan cloud untuk mendukung transformasi digital Anda.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#contact" class="inline-flex items-center rounded-xl bg-peach-600 px-6 py-3 text-white font-semibold shadow-soft hover:bg-peach-700">Coba Sekarang</a>
+              <a href="#features" class="inline-flex items-center rounded-xl border border-gray-300 px-6 py-3 font-semibold hover:bg-gray-50">Lihat Fitur</a>
+            </div>
+          </div>
+          <!-- Hero visual: SVG inline (gambar bawaan) -->
+          <div class="relative flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-48 sm:w-64 drop-shadow">
+              <rect width="256" height="256" rx="28" fill="#FF7A4D"/>
+              <text x="128" y="148" font-size="120" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif">S</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Features Section ===== -->
+    <section id="features" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Features</h2>
+          <p class="mt-3 text-gray-600">Tiga keunggulan utama yang membuat StarkCorp dipercaya banyak bisnis global.</p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-peach-100 text-peach-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.93V20h-2v-3.07A8.001 8.001 0 014.07 13H1v-2h3.07A8.001 8.001 0 0111 4.07V1h2v3.07A8.001 8.001 0 0119.93 11H23v2h-3.07A8.001 8.001 0 0113 16.93z"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold">Performa Tinggi</h3>
+            <p class="mt-2 text-gray-600">Arsitektur ringan dan efisien untuk waktu muat yang cepat.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-peach-100 text-peach-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor"><path d="M12 1a4 4 0 00-4 4v3H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2v-9a2 2 0 00-2-2h-3V5a4 4 0 00-4-4zm-2 7V5a2 2 0 114 0v3h-4z"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold">Keamanan Terjamin</h3>
+            <p class="mt-2 text-gray-600">Protokol modern dan praktik terbaik untuk menjaga data Anda.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 bg-white p-6 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-peach-100 text-peach-700">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor"><path d="M4 4h16v2H4V4zm0 7h16v2H4v-2zm0 7h16v2H4v-2z"/></svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold">Skalabilitas Mudah</h3>
+            <p class="mt-2 text-gray-600">Infrastruktur siap tumbuh seiring kebutuhan bisnis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">About Us</h2>
+          <p class="mt-4 text-gray-600">StarkCorp adalah perusahaan teknologi global yang fokus pada inovasi perangkat lunak, kecerdasan buatan, dan layanan cloud untuk membantu bisnis berkembang lebih cepat.</p>
+          <ul class="mt-6 space-y-3 text-gray-700">
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-peach-500"></span> Tim ahli di bidang AI, IoT, dan pengembangan web modern.</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-peach-500"></span> Solusi inovatif dan customer-oriented.</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-peach-500"></span> Dukungan premium dan SLA enterprise.</li>
+          </ul>
+        </div>
+        <!-- About visual: SVG inline (gambar bawaan) -->
+        <div class="order-1 lg:order-2">
+          <div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-soft flex items-center justify-center">
+            <div class="text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="mx-auto w-28 h-28">
+                <rect width="256" height="256" rx="28" fill="#FF7A4D"/>
+                <text x="128" y="148" font-size="120" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif">S</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Contact Us</h2>
+            <p class="mt-4 text-gray-600">Ingin bekerja sama dengan StarkCorp? Kirim pesan Anda, dan tim kami akan segera menghubungi.</p>
+            <div class="mt-8 rounded-2xl border border-gray-100 bg-white p-6 shadow-soft">
+              <form class="space-y-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                  <input id="name" name="name" type="text" class="mt-1 block w-full rounded-xl border-gray-300 focus:border-peach-500 focus:ring-peach-500" placeholder="Nama lengkap" />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input id="email" name="email" type="email" class="mt-1 block w-full rounded-xl border-gray-300 focus:border-peach-500 focus:ring-peach-500" placeholder="nama@domain.com" />
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+                  <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-xl border-gray-300 focus:border-peach-500 focus:ring-peach-500" placeholder="Ceritakan kebutuhan Anda"></textarea>
+                </div>
+                <button type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-peach-600 px-5 py-3 font-semibold text-white hover:bg-peach-700 shadow-soft">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+          <div class="lg:pl-8">
+            <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
+              <h3 class="text-lg font-semibold">Informasi Kontak</h3>
+              <ul class="mt-4 space-y-2 text-gray-700">
+                <li><strong>Email:</strong> contact@starkcorp.id</li>
+                <li><strong>Telepon:</strong> +62 812 9876 5432</li>
+                <li><strong>Alamat:</strong> Jl. Inovasi No. 45, Bandar Lampung</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div>
+          <a href="#home" class="flex items-center gap-2 group mb-4" aria-label="Beranda">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-peach-500 text-white font-bold shadow-soft group-hover:scale-105 transition">S</span>
+            <span class="font-bold text-lg">StarkCorp</span>
+          </a>
+          <p class="text-sm text-gray-300">Inovasi teknologi untuk masa depan yang lebih baik. Membangun solusi digital yang mengubah cara bisnis beroperasi.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#home" class="text-gray-300 hover:text-peach-400 transition">Home</a></li>
+            <li><a href="#features" class="text-gray-300 hover:text-peach-400 transition">Features</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-peach-400 transition">About</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-peach-400 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Subscribe</h3>
+          <p class="text-sm text-gray-300 mb-4">Dapatkan update terbaru langsung ke email Anda.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white text-sm focus:outline-none focus:border-peach-500" />
+            <button class="px-4 py-2 rounded-lg bg-peach-500 hover:bg-peach-600 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"/></svg>
+            </button>
+          </div>
+          <div class="mt-6">
+            <h4 class="font-semibold text-sm mb-3">Follow</h4>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-700 hover:bg-peach-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" aria-label="Twitter" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-700 hover:bg-peach-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M18.244 2.25h3.007l-6.57 7.506L22.5 21.75h-6.594l-4.905-6.41-5.61 6.41H2.384l7.04-8.05L1.5 2.25h6.75l4.43 5.836 5.564-5.836zM17.19 19.5h1.668L7.02 4.38H5.235L17.19 19.5z"/></svg>
+              </a>
+              <a href="#" aria-label="RSS" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-700 hover:bg-peach-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM7.5 21.5a2 2 0 11-.001-4.001 2 2 0 01.001 4.001zm5 0a.5.5 0 01-1 0 9.5 9.5 0 00-9.5-9.5.5.5 0 010-1c5.79 0 10.5 4.71 10.5 10.5zm5 0a.5.5 0 01-1 0c0-8.008-6.492-14.5-14.5-14.5a.5.5 0 010-1c8.56 0 15.5 6.94 15.5 15.5z"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-700 hover:bg-peach-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 3.9-2.2 4.1 0 4.9 2.7 4.9 6.1V24h-4v-7.1c0-1.7 0-3.9-2.4-3.9s-2.7 1.9-2.7 3.8V24h-4V8z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-700 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-300">
+        <p>Copyright © <span id="year"></span> StarkCorp. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-peach-400 transition">Terms of Use</a>
+          <a href="#" class="hover:text-peach-400 transition">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 opacity-10">
+      <div class="h-64 w-64 rounded-full bg-peach-500 blur-3xl"></div>
+    </div>
+  </footer>
+
+  <script>
+    // Tahun otomatis di footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('iconOpen');
+    const iconClose = document.getElementById('iconClose');
+    menuBtn?.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
