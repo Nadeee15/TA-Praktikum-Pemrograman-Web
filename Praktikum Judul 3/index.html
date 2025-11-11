@@ -6,7 +6,6 @@
   <title>StarkCorp — Landing Page</title>
   <meta name="description" content="Landing page responsif untuk perusahaan teknologi menggunakan Tailwind CSS." />
 
-  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,16 +24,15 @@
     }
   </script>
 
-  <!-- Favicon inline -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FF7A4D'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E">
   <style>html{scroll-behavior:smooth}</style>
 </head>
 <body class="antialiased text-gray-800">
-  <!-- ===== Header / Navigation ===== -->
+
   <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
-        <!-- TETAP: logo navbar seperti punyamu -->
+
         <a href="#home" class="flex items-center gap-2 group" aria-label="Beranda">
           <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-peach-500 text-white font-bold shadow-soft group-hover:scale-105 transition">S</span>
           <span class="font-semibold tracking-tight">StarkCorp</span>
@@ -52,7 +50,7 @@
         </button>
       </div>
     </div>
-    <!-- Mobile Menu -->
+
     <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
       <div class="space-y-1 px-4 py-3 text-sm">
         <a href="#home" class="block rounded-lg px-3 py-2 hover:bg-gray-50">Home</a>
@@ -65,7 +63,6 @@
   </header>
 
   <main>
-    <!-- ===== Hero Section ===== -->
     <section id="home" class="relative overflow-hidden">
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
         <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-peach-200 blur-3xl"></div>
@@ -82,7 +79,6 @@
               <a href="#features" class="inline-flex items-center rounded-xl border border-gray-300 px-6 py-3 font-semibold hover:bg-gray-50">Lihat Fitur</a>
             </div>
           </div>
-          <!-- Hero visual: SVG inline (gambar bawaan) -->
           <div class="relative flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-48 sm:w-64 drop-shadow">
               <rect width="256" height="256" rx="28" fill="#FF7A4D"/>
@@ -93,7 +89,6 @@
       </div>
     </section>
 
-    <!-- ===== Features Section ===== -->
     <section id="features" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
@@ -126,7 +121,6 @@
       </div>
     </section>
 
-    <!-- ===== About Section ===== -->
     <section id="about" class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
         <div class="order-2 lg:order-1">
@@ -138,7 +132,7 @@
             <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-peach-500"></span> Dukungan premium dan SLA enterprise.</li>
           </ul>
         </div>
-        <!-- About visual: SVG inline (gambar bawaan) -->
+
         <div class="order-1 lg:order-2">
           <div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-white to-gray-100 border border-gray-200 shadow-soft flex items-center justify-center">
             <div class="text-center">
@@ -152,7 +146,6 @@
       </div>
     </section>
 
-    <!-- ===== Contact Section ===== -->
     <section id="contact" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 items-start">
@@ -192,7 +185,6 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer class="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -258,10 +250,8 @@
   </footer>
 
   <script>
-    // Tahun otomatis di footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const iconOpen = document.getElementById('iconOpen');
